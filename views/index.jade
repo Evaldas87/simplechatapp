@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div.simplechatapp
+    div#chat-window
+        div#output
+        div#feedback
+    input(type="text", placeholder="Handle")#handle
+    input(type="text", placeholder="Message")#message
+    button#send Send
