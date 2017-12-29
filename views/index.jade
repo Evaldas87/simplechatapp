@@ -1,12 +1,18 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  div.simplechatapp
+  div.header
+    h1 Simple
+      span.red Chat
+        span.blue App
+  div#entername
+        input(type="text", placeholder="Your name")#handle
+        button#enternamebtn Ok
+  div#simplechatapp
     div#chat-window
         div#output
         div#feedback
-    input(type="text", placeholder="Handle")#handle
-    input(type="text", placeholder="Message")#message
-    button#send Send
+    div.message
+      form(action="localhost:3000", method="")#form
+        input(type="text", placeholder="Message")#message
+        input(type="submit", value="Send")#send
