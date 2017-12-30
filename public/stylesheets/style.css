@@ -5,6 +5,7 @@
 
 body {
     font: 16px Helvetica, Arial, sans-serif;
+    background: #f2f2f2;
 }
 
 a {
@@ -37,7 +38,22 @@ input {
 
 #chat-window {
 	padding-bottom: 80px;
+	margin-left: 10px;
+	width: 70%;
+	display: inline-block;
 }
+
+#userswrap {
+	display: inline-block;
+	float: right;
+	margin-right: 20px;
+	max-width: 200px;
+}
+
+#users {
+	list-style: none;
+}
+
 
 #feedback {
 	color: gray;
@@ -62,4 +78,6 @@ button {
 
 .header {
 	padding: 10px;
+	border-bottom: 1px black solid;
+	margin-bottom: 10px;
 }

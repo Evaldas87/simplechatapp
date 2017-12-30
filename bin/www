@@ -8,6 +8,7 @@ var app = require('../app');
 var debug = require('debug')('simplechatapp:server');
 var http = require('http');
 var socket = require('socket.io');
+users = [];
 
 
 /**
@@ -102,6 +103,21 @@ io.on('connection', function(socket) {
   })
   socket.on('typing', function(data) {
     socket.broadcast.emit('typing', data)
+  })
+  socket.on('new user', function(data) {
+    socket.name = data;
+    users.push(socket.name);
+    updateUsers();
 
+  })
+
+  function updateUsers() {
+    io.sockets.emit('users', users)
+  }
+
+  socket.on('disconnect', function(data){
+    if (!socket.name) return;
+    users.splice(users.indexOf(socket.name), 1);
+    updateUsers();
   })
 });

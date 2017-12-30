@@ -12,7 +12,10 @@ block content
     div#chat-window
         div#output
         div#feedback
+    div#userswrap
+      h3 Users online:
+      ul#users
     div.message
-      form(action="localhost:3000", method="")#form
+      form(action="", method="", onsubmit="return false")#form
         input(type="text", placeholder="Message")#message
         input(type="submit", value="Send")#send
