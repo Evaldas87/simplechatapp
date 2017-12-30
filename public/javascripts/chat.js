@@ -19,7 +19,6 @@ btn.addEventListener('click', function() {
 		message: message.value,
 		handle: handle.value,
 		});
-	window.scrollTo(0, document.body.scrollHeight);
 	message.value = "";
 });
 
@@ -32,7 +31,8 @@ message.addEventListener('keypress', function() {
 
 socket.on('chat', function(data){
 	feedback.innerHTML = "";
-	output.innerHTML += '<p><strong>' + data.handle + '> </strong>' + data.message + '</p>';
+	output.innerHTML += '<p><strong>' + data.handle + ': </strong>' + data.message + '</p>';
+	window.scrollTo(0, document.body.scrollHeight);
 })
 
 socket.on('typing', function(data){

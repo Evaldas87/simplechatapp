@@ -4,7 +4,7 @@
 }
 
 body {
-    font: 16px Helvetica, Arial, sans-serif;
+    font: 16px Consolas, Arial, sans-serif;
     background: #f2f2f2;
 }
 
@@ -28,8 +28,9 @@ a {
 }
 
 input { 
-    font: 16px Helvetica, Arial, sans-serif;
+    font: 16px Consolas, Arial, sans-serif;
     padding: 10px;
+    border: none;
 }
 
 #simplechatapp {
@@ -37,17 +38,18 @@ input {
 }
 
 #chat-window {
+	margin-top: 100px;
 	padding-bottom: 80px;
 	margin-left: 10px;
-	width: 70%;
+	width: 80%;
 	display: inline-block;
 }
 
 #userswrap {
 	display: inline-block;
-	float: right;
-	margin-right: 20px;
 	max-width: 200px;
+	position: fixed;
+	top: 50px;
 }
 
 #users {
@@ -64,20 +66,22 @@ input {
 	margin: 200px auto;
 }
 
-button {
-	padding: 10px 15px;
-}
-
-.red {
-	color: red;
-}
-
-.blue {
-	color: blue;
+#enternamebtn, #send {
+	padding: 10px 20px;
+	font: 16px Consolas, Arial, sans-serif;
+	border: none;
 }
 
 .header {
 	padding: 10px;
-	border-bottom: 1px black solid;
 	margin-bottom: 10px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #f2f2f2;
+}
+
+h1, h2 {
+	color: #777;
 }

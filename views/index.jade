@@ -2,12 +2,11 @@ extends layout
 
 block content
   div.header
-    h1 Simple
-      span.red Chat
-        span.blue App
+    h1 ChatAway...
   div#entername
+    form(action="", method="", onsubmit="return false")
         input(type="text", placeholder="Your name")#handle
-        button#enternamebtn Ok
+        input(type="submit", value="Ok")#enternamebtn
   div#simplechatapp
     div#chat-window
         div#output
